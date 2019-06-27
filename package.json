@@ -3,6 +3,11 @@
   "version": "0.0.1",
   "description": "@magicdawn/eslint-config",
   "main": "index.js",
+  "files": [
+    "lib",
+    "index.js",
+    "vue.js"
+  ],
   "scripts": {
     "test": "mocha",
     "test-cover": "nyc --reporter=lcov --reporter=text mocha",
@@ -24,10 +29,7 @@
   },
   "homepage": "https://github.com/magicdawn/eslint-config#readme",
   "devDependencies": {
-    "codecov": "^3.3.0",
-    "eslint": "^5.16.0",
-    "mocha": "^6.1.4",
-    "nyc": "^14.0.0",
-    "should": "^13.2.3"
+    "@magicdawn/prettier-config": "^0.0.1",
+    "eslint": "^6.0.1"
   }
 }
