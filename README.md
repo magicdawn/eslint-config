@@ -12,6 +12,13 @@
 $ cnpm i -D @magicdawn/eslint-config
 ```
 
+& `eslint` / `eslint-plugin-vue` / `eslint-plugin-react` should be installed too
+As `@magicdawn/eslint-config` `'s` peerDependencies
+
+```sh
+$ cnpm i -D @magicdawn/eslint-config eslint eslint-plugin-vue eslint-plugin-react
+```
+
 ## Usage
 
 ### `default` for Node.js project
@@ -28,6 +35,14 @@ extends:
 # .eslintrc.yml
 extends:
   - @magicdawn/eslint-config/vue
+```
+
+### `react` for react project
+
+```yml
+# .eslintrc.yml
+extends:
+  - @magicdawn/eslint-config/react
 ```
 
 ## Changelog

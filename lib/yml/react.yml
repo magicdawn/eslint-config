@@ -4,10 +4,17 @@ env:
   jest: true
   browser: true
 
+parser: babel-eslint
+
 parserOptions:
-  ecmaVersion: 2019
-  parser: babel-eslint
   sourceType: module
+  ecmaVersion: 2019
+  ecmaFeatures:
+    jsx: true
+
+plugins:
+  - react
 
 extends:
   - 'eslint:recommended'
+  - 'plugin:react/recommended'
