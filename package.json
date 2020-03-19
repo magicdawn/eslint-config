@@ -6,7 +6,8 @@
   "files": [
     "lib",
     "index.js",
-    "vue.js"
+    "vue.js",
+    "react.js"
   ],
   "scripts": {
     "test": "mocha",

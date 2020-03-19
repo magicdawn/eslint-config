@@ -12,8 +12,7 @@
 $ cnpm i -D @magicdawn/eslint-config
 ```
 
-& `eslint` / `eslint-plugin-vue` / `eslint-plugin-react` should be installed too
-As `@magicdawn/eslint-config` `'s` peerDependencies
+AND `eslint` / `eslint-plugin-vue` / `eslint-plugin-react` should be installed As peerDependencies
 
 ```sh
 $ cnpm i -D @magicdawn/eslint-config eslint eslint-plugin-vue eslint-plugin-react
