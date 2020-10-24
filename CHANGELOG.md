@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.0.4 2020-10-24
+
+- fix dependency
+
 ## v0.0.3 2020-03-20
 
 - add `react.js` to `pkg.files`
