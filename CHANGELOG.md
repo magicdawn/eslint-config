@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.0.3 2020-03-20
+
+- add `react.js` to `pkg.files`
+
 ## v0.0.2 2020-01-12
 
 - add react config

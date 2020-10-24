@@ -1,12 +1,13 @@
 {
   "name": "@magicdawn/eslint-config",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "@magicdawn/eslint-config",
   "main": "index.js",
   "files": [
     "lib",
     "index.js",
-    "vue.js"
+    "vue.js",
+    "react.js"
   ],
   "scripts": {
     "test": "mocha",
