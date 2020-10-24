@@ -31,12 +31,14 @@
   "dependencies": {
     "babel-eslint": "^10.0.3"
   },
+  "peerDependencies": {
+    "eslint": ">6"
+  },
+  "optionalDependencies": {
+    "eslint-plugin-react": ">7",
+    "eslint-plugin-vue": ">6"
+  },
   "devDependencies": {
     "@magicdawn/prettier-config": "^0.0.1"
-  },
-  "peerDependencies": {
-    "eslint": "^6.0.1",
-    "eslint-plugin-react": "^7.17.0",
-    "eslint-plugin-vue": "^6.1.2"
   }
 }
