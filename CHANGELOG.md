@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.0.5 2020-11-22
+
+- remove `eslint` from peerDependencies
+
 ## v0.0.4 2020-10-24
 
 - fix dependency
