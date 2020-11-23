@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.0.6 2020-11-23
+
+- fix dependency, `eslint-plugin-react: ">7"` -> `eslint-plugin-react: ">=7"`
+
 ## v0.0.5 2020-11-22
 
 - remove `eslint` from peerDependencies
