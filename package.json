@@ -30,13 +30,17 @@
   },
   "homepage": "https://github.com/magicdawn/eslint-config#readme",
   "dependencies": {
-    "babel-eslint": "^10.0.3"
+    "@babel/core": "^7.18.6",
+    "@babel/eslint-parser": "^7.18.2"
   },
   "optionalDependencies": {
-    "eslint-plugin-react": ">=7",
-    "eslint-plugin-vue": ">=6"
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-vue": "^9.2.0"
   },
   "devDependencies": {
-    "@magicdawn/prettier-config": "^0.0.1"
-  }
+    "@magicdawn/prettier-config": "^0.0.2"
+  },
+	"peerDependencies": {
+		"eslint": "*"
+	}
 }
