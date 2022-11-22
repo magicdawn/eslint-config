@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## v0.1.0 2022-11-22
+
+- fix babel-eslint deprecated notice
+
 ## v0.0.6 2020-11-23
 
 - fix dependency, `eslint-plugin-react: ">7"` -> `eslint-plugin-react: ">=7"`
