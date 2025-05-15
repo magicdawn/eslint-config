@@ -55,7 +55,7 @@ export const mgCustomRules = {
   import: {
     'import/no-mutable-exports': 'off',
     'import/no-default-export': 'off',
-    'unused-imports/no-unused-vars': 'warn',
     'unused-imports/no-unused-imports': 'warn',
+    'unused-imports/no-unused-vars': 'off',
   },
 } as const satisfies Record<string, Linter.RulesRecord>
