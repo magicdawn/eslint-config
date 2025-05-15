@@ -25,7 +25,8 @@
     "dev": "tsdown src/index.ts --dts --watch",
     "build": "tsdown src/index.ts --dts",
     "typecheck": "tsc --noEmit",
-    "prepublishOnly": "pnpm typecheck && pnpm build"
+    "prepublishOnly": "pnpm typecheck && pnpm build",
+    "inspect": "pnpx @eslint/config-inspector@latest"
   },
   "peerDependencies": {
     "@unocss/eslint-plugin": ">=65.0.0",
