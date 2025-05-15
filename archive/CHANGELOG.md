@@ -1,5 +1,7 @@
 # CHANGELOG
 
+Later version changelog are generated as Releases https://github.com/magicdawn/eslint-config/releases
+
 ## v0.0.6 2020-11-23
 
 - fix dependency, `eslint-plugin-react: ">7"` -> `eslint-plugin-react: ">=7"`

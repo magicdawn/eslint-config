@@ -9,44 +9,29 @@
 ## Install
 
 ```sh
-$ cnpm i -D @magicdawn/eslint-config
-```
-
-AND `eslint` / `eslint-plugin-vue` / `eslint-plugin-react` should be installed As peerDependencies
-
-```sh
-$ cnpm i -D @magicdawn/eslint-config eslint eslint-plugin-vue eslint-plugin-react
+$ pnpm add -D @magicdawn/eslint-config
 ```
 
 ## Usage
 
-### `default` for Node.js project
+### extend from [@sxzz/eslint-config](https://github.com/sxzz/eslint-config)
 
-```yml
-# .eslintrc.yml
-extends:
-  - @magicdawn
+```ts
+import { fromSxzz } from '@magicdawn/eslint-config'
+export default fromSxzz()
 ```
 
-### `vue` for vue project
+### from ground to up
 
-```yml
-# .eslintrc.yml
-extends:
-  - @magicdawn/eslint-config/vue
+```ts
+import { defineConfig } from 'eslint/config'
+import { groundToUpConfigs } from '@magicdawn/eslint-config'
+
+export default defineConfig([
+  ...groundToUpConfigs,
+  // more configs
+])
 ```
-
-### `react` for react project
-
-```yml
-# .eslintrc.yml
-extends:
-  - @magicdawn/eslint-config/react
-```
-
-## Changelog
-
-[CHANGELOG.md](CHANGELOG.md)
 
 ## License
 
