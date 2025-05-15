@@ -29,6 +29,10 @@
       "default": "./dist/index.js"
     }
   },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
   "scripts": {
     "prepare": "husky",
     "dev": "tsdown src/index.ts --dts --watch",
