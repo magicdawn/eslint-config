@@ -19,7 +19,16 @@
     "url": "git+https://github.com/magicdawn/eslint-config.git"
   },
   "author": "magicdawn",
-  "files": [],
+  "files": [
+    "dist/"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
   "scripts": {
     "prepare": "husky",
     "dev": "tsdown src/index.ts --dts --watch",
