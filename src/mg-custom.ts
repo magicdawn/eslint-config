@@ -1,6 +1,7 @@
 import type { Linter } from 'eslint'
 
 export const mgCustomIgnoreConfig: Linter.Config = {
+  name: 'mg/custom-ignore',
   ignores: [
     'dist/',
     '**/*.module.{css,less,scss}.d.ts', // generated
