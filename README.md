@@ -33,6 +33,32 @@ export default defineConfig([
 ])
 ```
 
+## Extra Setup
+
+### `.vscode/settings.json`
+
+```json
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}
+```
+
+### `package.json`
+
+```json
+{
+  "lint-staged": {
+    "*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,json,md,yaml,yml}": ["eslint --fix", "prettier --write"],
+    "!*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,json,md,yaml,yml}": ["prettier --write"], // optional, I don't know is this really necessary?
+
+    // or more aggressive
+    "*": ["eslint --fix --no-warn-ignored", "prettier --write --ignore-unknown"]
+  }
+}
+```
+
 ## License
 
 the MIT License http://magicdawn.mit-license.org
