@@ -1,42 +1,52 @@
 {
   "name": "@magicdawn/eslint-config",
   "version": "0.0.6",
-  "description": "@magicdawn/eslint-config",
-  "main": "index.js",
-  "files": [
-    "lib",
-    "index.js",
-    "vue.js",
-    "react.js"
-  ],
-  "scripts": {
-    "test": "mocha",
-    "test-cover": "nyc --reporter=lcov --reporter=text mocha",
-    "report-cover": "codecov"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/magicdawn/eslint-config.git"
-  },
+  "packageManager": "pnpm@10.11.0+sha512.6540583f41cc5f628eb3d9773ecee802f4f9ef9923cc45b69890fb47991d4b092964694ec3a4f738a420c918a333062c8b925d312f42e4f0c263eb603551f977",
+  "description": "magicdawn's eslint-config",
+  "type": "module",
   "keywords": [
     "eslint-config",
     "eslint",
     "magicdawn"
   ],
-  "author": "magicdawn",
   "license": "MIT",
+  "homepage": "https://github.com/magicdawn/eslint-config#readme",
   "bugs": {
     "url": "https://github.com/magicdawn/eslint-config/issues"
   },
-  "homepage": "https://github.com/magicdawn/eslint-config#readme",
-  "dependencies": {
-    "babel-eslint": "^10.0.3"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicdawn/eslint-config.git"
   },
-  "optionalDependencies": {
-    "eslint-plugin-react": ">=7",
-    "eslint-plugin-vue": ">=6"
+  "author": "magicdawn",
+  "files": [],
+  "scripts": {
+    "prepare": "husky",
+    "dev": "tsdown src/index.ts --dts --watch",
+    "build": "tsdown src/index.ts --dts",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "pnpm typecheck && pnpm build"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.26.0",
+    "@sxzz/eslint-config": "^7.0.1",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-flat-config-utils": "^2.0.1",
+    "globals": "^16.1.0",
+    "typescript-eslint": "^8.32.1"
   },
   "devDependencies": {
-    "@magicdawn/prettier-config": "^0.0.1"
+    "@magicdawn/prettier-config": "^0.1.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.0.0",
+    "prettier": "^3.5.3",
+    "tsdown": "^0.11.9"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,cjs,mjs,cts,mts,md,yaml,yml}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }

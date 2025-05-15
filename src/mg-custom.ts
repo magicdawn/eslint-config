@@ -1,0 +1,61 @@
+import type { Linter } from 'eslint'
+
+export const mgCustomIgnoreConfig: Linter.Config = {
+  ignores: [
+    'dist/',
+    '**/*.module.{css,less,scss}.d.ts', // generated
+  ],
+}
+
+export const mgCustomRules = {
+  eslintCore: {
+    'prefer-arrow-callback': 'off',
+    'no-constant-condition': 'off',
+    'no-void': 'off',
+    'no-restricted-syntax': 'off',
+    'no-console': 'off',
+    'no-duplicate-imports': 'off',
+    'prefer-const': ['warn', { destructuring: 'all' }],
+  },
+
+  // import {type X} from 'x'
+  special__typeImport: {
+    'no-duplicate-imports': 'off',
+    '@typescript-eslint/consistent-type-imports': ['warn', { fixStyle: 'inline-type-imports' }],
+  },
+
+  unicorn: {
+    'unicorn/catch-error-name': 'off',
+    'unicorn/consistent-function-scoping': 'off',
+    'unicorn/filename-case': 'off',
+    // I don't prefer, I know what I'm doing ~
+    'unicorn/prefer-array-flat-map': 'off',
+    'unicorn/prefer-array-index-of': 'off',
+    'unicorn/prefer-array-some': 'off',
+    'unicorn/prefer-single-call': 'off',
+    'unicorn/prefer-reflect-apply': 'off',
+    'unicorn/prefer-query-selector': 'off',
+    'unicorn/prefer-dom-node-append': 'off',
+    'unicorn/prefer-dom-node-dataset': 'off',
+    'unicorn/prefer-modern-dom-apis': 'off', // insertAdjacentElement is so nice & intuitive, but U prefer other !!!
+    'unicorn/prefer-add-event-listener': 'off',
+    'unicorn/prefer-string-trim-start-end': 'off',
+  },
+
+  tseslint: {
+    '@typescript-eslint/ban-ts-comment': 'off',
+    '@typescript-eslint/no-unused-vars': 'off',
+    '@typescript-eslint/no-non-null-assertion': 'off',
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/no-namespace': 'off',
+    '@typescript-eslint/no-unused-expressions': 'off',
+    '@typescript-eslint/prefer-literal-enum-member': 'off',
+  },
+
+  import: {
+    'import/no-mutable-exports': 'off',
+    'import/no-default-export': 'off',
+    'unused-imports/no-unused-vars': 'warn',
+    'unused-imports/no-unused-imports': 'warn',
+  },
+} as const satisfies Record<string, Linter.RulesRecord>
