@@ -51,7 +51,7 @@ export default defineConfig([
 {
   "lint-staged": {
     "*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,json,md,yaml,yml}": ["eslint --fix", "prettier --write"],
-    "!*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,json,md,yaml,yml}": ["prettier --write"], // optional, I don't know is this really necessary?
+    "!*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,json,md,yaml,yml}": ["prettier --write --ignore-unknown"], // optional, I don't know is this really necessary?
 
     // or more aggressive
     "*": ["eslint --fix --no-warn-ignored", "prettier --write --ignore-unknown"]
