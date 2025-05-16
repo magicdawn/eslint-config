@@ -32,6 +32,7 @@ export function fromSxzz(...args: Parameters<typeof sxzz>) {
       ...(moreConfigs ?? []),
     )
       .remove('sxzz/node') // not useful
+      .remove('sxzz/de-morgan') // NO, I hate this
       .remove('sxzz/markdown/recommended/processor')
       .removeRules('sxzz/prefer-string-function')
 
