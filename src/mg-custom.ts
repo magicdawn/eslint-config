@@ -60,3 +60,28 @@ export const mgCustomRules = {
     'unused-imports/no-unused-vars': 'off',
   },
 } as const satisfies Record<string, Linter.RulesRecord>
+
+// https://www.typescriptlang.org/tsconfig/
+export const mgCustomJsonOrder = {
+  tsconfig: [
+    {
+      path: 'top-level',
+      pathPattern: '^$',
+      order: [
+        // basic config
+        'extends',
+        'files',
+        'include',
+        'exclude',
+        'references',
+
+        // complex
+        'compilerOptions',
+
+        // rarely used
+        'watchOptions',
+        'typeAcquisition',
+      ],
+    },
+  ],
+}
