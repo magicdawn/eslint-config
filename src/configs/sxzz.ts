@@ -1,4 +1,5 @@
 import { GLOB_SRC, GLOB_TS, GLOB_TSX, sxzz } from '@sxzz/eslint-config'
+import { uniq } from 'es-toolkit'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import { mgCustomIgnoreConfig, mgCustomJsonOrder, mgCustomRules } from '../mg-custom'
 
@@ -39,11 +40,10 @@ export function fromSxzz(...args: Parameters<typeof sxzz>) {
         const val = config.rules?.['jsonc/sort-keys']
         if (val && Array.isArray(val) && val.length > 0) {
           const ruleOptions = val.slice(1) as Array<{ pathPattern: string; order: string[] }>
-
           const targets = mgCustomJsonOrder.tsconfig
           for (const target of targets) {
             const ruleOption = ruleOptions.find((x) => x.pathPattern === target.pathPattern)
-            if (ruleOption) ruleOption.order = target.order
+            if (ruleOption) ruleOption.order = uniq([...target.order, ...ruleOption.order])
           }
         }
 
