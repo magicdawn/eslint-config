@@ -59,6 +59,12 @@ export const mgCustomRules = {
     'unused-imports/no-unused-imports': 'warn',
     'unused-imports/no-unused-vars': 'off',
   },
+
+  dts: {
+    // dts: global augmentation use `var`
+    'no-var': 'off',
+    'vars-on-top': 'off',
+  },
 } as const satisfies Record<string, Linter.RulesRecord>
 
 export type TsConfigCompilerOptionsKey =

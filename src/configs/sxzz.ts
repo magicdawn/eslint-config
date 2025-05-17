@@ -28,6 +28,11 @@ export function fromSxzz(...args: Parameters<typeof sxzz>) {
             ...mgCustomRules.special__typeImport,
           },
         },
+        {
+          name: 'mg/custom-rules/dts',
+          files: ['**/*.d.ts'],
+          rules: { ...mgCustomRules.dts },
+        },
       ],
       ...(moreConfigs ?? []),
     )
