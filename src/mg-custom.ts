@@ -17,6 +17,7 @@ export const mgCustomRules = {
     'no-console': 'off',
     'no-duplicate-imports': 'off',
     'prefer-const': ['warn', { destructuring: 'all' }],
+    'array-callback-return': 'off', // this rule is useful, but current habit don't use it. Enable after it cause a serious bug
   },
 
   // import {type X} from 'x'
@@ -51,6 +52,7 @@ export const mgCustomRules = {
     '@typescript-eslint/no-namespace': 'off',
     '@typescript-eslint/no-unused-expressions': 'off',
     '@typescript-eslint/prefer-literal-enum-member': 'off',
+    '@typescript-eslint/no-this-alias': 'off', // 我也不想用啊, 有时候确实需要
   },
 
   import: {
