@@ -59,6 +59,12 @@ export default defineConfig([
 }
 ```
 
+### `.prettierignore`
+
+```txt
+pnpm-lock.yaml
+```
+
 ## License
 
 the MIT License http://magicdawn.mit-license.org
