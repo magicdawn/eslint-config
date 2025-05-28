@@ -27,10 +27,15 @@ export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]) {
         eslintConfigPrettier,
         mgCustomIgnoreConfig,
         {
+          // apply to all files
+          rules: {
+            ...mgCustomRules.unicorn,
+          },
+        },
+        {
           name: 'mg/custom-rules',
           files: [GLOB_SRC],
           rules: {
-            ...mgCustomRules.unicorn,
             ...mgCustomRules.import,
             ...mgCustomRules.eslintCore,
           },
