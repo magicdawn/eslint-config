@@ -50,8 +50,9 @@ export default defineConfig([
 ```json
 {
   "lint-staged": {
-    "*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,json,md,yaml,yml}": ["eslint --fix", "prettier --write"],
-    "!*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,json,md,yaml,yml}": ["prettier --write --ignore-unknown"], // optional, I don't know is this really necessary?
+    // eslint+prettier on js,json,yaml
+    "*.{?(c|m)(j|t)s?(x),json,y?(a)ml}": ["eslint --fix", "prettier --write"],
+    "!*.{?(c|m)(j|t)s?(x),json,y?(a)ml}": ["prettier --write --ignore-unknown"],
 
     // or more aggressive
     "*": ["eslint --fix --no-warn-ignored", "prettier --write --ignore-unknown"]
@@ -61,7 +62,8 @@ export default defineConfig([
 
 ### `.prettierignore`
 
-```txt
+```gitignore
+# contents not in .gitignore
 pnpm-lock.yaml
 ```
 
