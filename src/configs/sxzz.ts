@@ -1,5 +1,6 @@
+import assert from 'node:assert/strict'
 import { GLOB_SRC, GLOB_TS, GLOB_TSX, sxzz } from '@sxzz/eslint-config'
-import { invariant, uniq } from 'es-toolkit'
+import { uniq } from 'es-toolkit'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import { mgCustomIgnoreConfig, mgCustomJsonOrder, mgCustomRules } from '../mg-custom'
 import type { Linter } from 'eslint'
@@ -83,10 +84,16 @@ export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]) {
         const val = config.rules?.['perfectionist/sort-imports']
         if (val && Array.isArray(val) && val.length > 0) {
           const [severity, ...options] = val
-          invariant(options.length === 1, 'options.length should be 1')
+          assert(options.length === 1, 'options.length should be 1')
+          assert(options[0], 'options[0] should not be nil')
           // modify options
           options[0].internalPattern = uniq(['^[~@#$]/.*', String.raw`^\$.+`, ...(internalPattern ?? [])]) // add `$`
-          options[0].groups = uniq([...(groups ?? []), 'side-effect-style', 'side-effect', ...options[0].groups])
+          options[0].groups = uniq([
+            ...(groups ?? []),
+            'side-effect-style',
+            'side-effect',
+            ...(options[0].groups ?? []),
+          ])
         }
         return config
       })
