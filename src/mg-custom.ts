@@ -199,6 +199,7 @@ export const mgCustomJsonOrder = {
         'tsBuildInfoFile',
         'composite',
         'rootDir',
+        'outDir',
         'baseUrl',
         'paths',
 
