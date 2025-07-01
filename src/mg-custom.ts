@@ -44,6 +44,10 @@ export const mgCustomRules = {
     'unicorn/prefer-string-trim-start-end': 'off',
   },
 
+  disableMorePrefer: {
+    'prefer-template': 'off',
+  },
+
   tseslint: {
     '@typescript-eslint/ban-ts-comment': 'off',
     '@typescript-eslint/no-unused-vars': 'off',

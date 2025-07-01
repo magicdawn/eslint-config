@@ -2,7 +2,7 @@ import assert from 'node:assert/strict'
 import { GLOB_SRC, GLOB_TS, GLOB_TSX, sxzz } from '@sxzz/eslint-config'
 import { uniq } from 'es-toolkit'
 import eslintConfigPrettier from 'eslint-config-prettier'
-import { mgCustomIgnoreConfig, mgCustomJsonOrder, mgCustomRules } from '../mg-custom'
+import { mgCustomIgnoreConfig, mgCustomJsonOrder, mgCustomRules } from './mg-custom'
 import type { Linter } from 'eslint'
 
 type SxzzArgs = Parameters<typeof sxzz>
@@ -29,12 +29,14 @@ export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]) {
         mgCustomIgnoreConfig,
         {
           // apply to all files
+          name: 'mg/custom-rules/all-files',
           rules: {
             ...mgCustomRules.unicorn,
+            ...mgCustomRules.disableMorePrefer,
           },
         },
         {
-          name: 'mg/custom-rules',
+          name: 'mg/custom-rules/src-files',
           files: [GLOB_SRC],
           rules: {
             ...mgCustomRules.import,

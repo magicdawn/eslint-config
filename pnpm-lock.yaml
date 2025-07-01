@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@eslint/js':
-        specifier: ^9.30.0
-        version: 9.30.0
       '@sxzz/eslint-config':
         specifier: ^7.0.4
         version: 7.0.4(@types/eslint@9.6.1)(@typescript-eslint/eslint-plugin@8.35.0(@typescript-eslint/parser@8.35.0(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(@typescript-eslint/utils@8.35.0(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(@unocss/eslint-plugin@66.1.2(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3))(eslint-import-resolver-node@0.3.9)(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
@@ -29,19 +26,13 @@ importers:
       eslint-flat-config-utils:
         specifier: ^2.1.0
         version: 2.1.0
-      globals:
-        specifier: ^16.2.0
-        version: 16.2.0
-      typescript-eslint:
-        specifier: ^8.35.0
-        version: 8.35.0(eslint@9.27.0(jiti@2.4.2))(typescript@5.8.3)
     devDependencies:
       '@magicdawn/prettier-config':
         specifier: ^0.1.0
         version: 0.1.0
       '@types/node':
-        specifier: ^24.0.6
-        version: 24.0.6
+        specifier: ^24.0.8
+        version: 24.0.8
       husky:
         specifier: ^9.1.7
         version: 9.1.7
@@ -337,8 +328,8 @@ packages:
   '@types/ms@2.1.0':
     resolution: {integrity: sha512-GsCCIZDE/p3i96vtEqx+7dBUGXrc7zeSK3wwPHIaRThS+9OhWIXRqzs4d6k1SVU8g91DrNRWxWUGhp5KXQb2VA==}
 
-  '@types/node@24.0.6':
-    resolution: {integrity: sha512-ZOyn+gOs749xU7ovp+Ibj0g1o3dFRqsfPnT22C2t5JzcRvgsEDpGawPbCISGKLudJk9Y0wiu9sYd6kUh0pc9TA==}
+  '@types/node@24.0.8':
+    resolution: {integrity: sha512-WytNrFSgWO/esSH9NbpWUfTMGQwCGIKfCmNlmFDNiI5gGhgMmEA+V1AEvKLeBNvvtBnailJtkrEa2OIISwrVAA==}
 
   '@types/unist@3.0.3':
     resolution: {integrity: sha512-ko/gIFJRv177XgZsZcBwnqJN5x/Gien8qNOn0D5bQU/zAzVf9Zt3BlcUiLqhV9y4ARk0GbT3tnUiPNgnTXzc/Q==}
@@ -2087,7 +2078,7 @@ snapshots:
 
   '@types/ms@2.1.0': {}
 
-  '@types/node@24.0.6':
+  '@types/node@24.0.8':
     dependencies:
       undici-types: 7.8.0
 

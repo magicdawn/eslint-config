@@ -51,17 +51,14 @@
     }
   },
   "dependencies": {
-    "@eslint/js": "^9.30.0",
     "@sxzz/eslint-config": "^7.0.4",
     "es-toolkit": "^1.39.5",
     "eslint-config-prettier": "^10.1.5",
-    "eslint-flat-config-utils": "^2.1.0",
-    "globals": "^16.2.0",
-    "typescript-eslint": "^8.35.0"
+    "eslint-flat-config-utils": "^2.1.0"
   },
   "devDependencies": {
     "@magicdawn/prettier-config": "^0.1.0",
-    "@types/node": "^24.0.6",
+    "@types/node": "^24.0.8",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",

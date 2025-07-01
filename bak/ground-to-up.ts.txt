@@ -1,7 +1,7 @@
 import eslint from '@eslint/js'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import tseslint from 'typescript-eslint'
-import { mgCustomIgnoreConfig, mgCustomRules } from '../mg-custom'
+import { mgCustomIgnoreConfig, mgCustomRules } from '../src/mg-custom'
 import type { Linter } from 'eslint'
 
 export const groundToUpConfigs: Linter.Config[] = [
