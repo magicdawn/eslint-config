@@ -42,6 +42,7 @@ export const mgCustomRules = {
     'unicorn/prefer-modern-dom-apis': 'off', // insertAdjacentElement is so nice & intuitive, but U prefer other !!!
     'unicorn/prefer-add-event-listener': 'off',
     'unicorn/prefer-string-trim-start-end': 'off',
+    'unicorn/prefer-string-raw': 'off',
   },
 
   disableMorePrefer: {
