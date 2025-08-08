@@ -62,6 +62,8 @@ export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]) {
       .remove('sxzz/node') // not useful
       .remove('sxzz/de-morgan') // NO, I hate this
       .remove('sxzz/markdown/recommended/processor')
+      .remove('sxzz/comments/recommended')
+      .remove('sxzz/comments')
       .removeRules('sxzz/prefer-string-function')
 
       // replace tsconfig order with mgCustom
