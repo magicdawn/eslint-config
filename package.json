@@ -1,7 +1,7 @@
 {
   "name": "@magicdawn/eslint-config",
   "version": "1.5.9",
-  "packageManager": "pnpm@10.14.0+sha512.ad27a79641b49c3e481a16a805baa71817a04bbe06a38d17e60e2eaee83f6a146c6a688125f5792e48dd5ba30e7da52a5cda4c3992b9ccf333f9ce223af84748",
+  "packageManager": "pnpm@10.23.0+sha512.21c4e5698002ade97e4efe8b8b4a89a8de3c85a37919f957e7a0f30f38fbc5bbdd05980ffe29179b2fb6e6e691242e098d945d1601772cad0fef5fb6411e2a4b",
   "description": "magicdawn's eslint-config",
   "type": "module",
   "keywords": [
@@ -51,18 +51,18 @@
     }
   },
   "dependencies": {
-    "@sxzz/eslint-config": "^7.1.2",
-    "es-toolkit": "^1.39.8",
+    "@sxzz/eslint-config": "^7.3.2",
+    "es-toolkit": "^1.42.0",
     "eslint-config-prettier": "^10.1.8",
-    "eslint-flat-config-utils": "^2.1.1"
+    "eslint-flat-config-utils": "^2.1.4"
   },
   "devDependencies": {
     "@magicdawn/prettier-config": "^0.1.0",
-    "@types/node": "^24.2.0",
+    "@types/node": "^24.10.1",
     "husky": "^9.1.7",
-    "lint-staged": "^16.1.4",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.6.2",
-    "tsdown": "^0.13.3"
+    "tsdown": "^0.16.7"
   },
   "lint-staged": {
     "*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,json,md,yaml,yml}": [
