@@ -27,10 +27,12 @@ export const mgCustomRules = {
   },
 
   unicorn: {
+    /**
+     * I don't prefer, I know what I'm doing ~
+     */
     'unicorn/catch-error-name': 'off',
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/filename-case': 'off',
-    // I don't prefer, I know what I'm doing ~
     'unicorn/prefer-array-flat-map': 'off',
     'unicorn/prefer-array-index-of': 'off',
     'unicorn/prefer-array-some': 'off',
@@ -43,6 +45,10 @@ export const mgCustomRules = {
     'unicorn/prefer-add-event-listener': 'off',
     'unicorn/prefer-string-trim-start-end': 'off',
     'unicorn/prefer-string-raw': 'off',
+    /**
+     * change options
+     */
+    'unicorn/text-encoding-identifier-case': ['warn', { withDash: true }], // ✅ `utf-8`, no `utf8`
   },
 
   disableMorePrefer: {
