@@ -25,8 +25,8 @@
   "exports": {
     "./package.json": "./package.json",
     ".": {
-      "types": "./dist/index.d.mts",
-      "default": "./dist/index.mjs"
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
     }
   },
   "publishConfig": {
@@ -35,8 +35,8 @@
   },
   "scripts": {
     "prepare": "husky",
-    "dev": "tsdown src/index.ts --dts --watch",
-    "build": "tsdown src/index.ts --dts",
+    "dev": "tsdown src/index.ts --dts --no-fixed-extension --watch",
+    "build": "tsdown src/index.ts --dts --no-fixed-extension",
     "typecheck": "tsc --noEmit",
     "prepublishOnly": "pnpm typecheck && pnpm build",
     "inspect": "pnpx @eslint/config-inspector@latest"
