@@ -45,6 +45,7 @@ export const mgCustomRules = {
     'unicorn/prefer-add-event-listener': 'off',
     'unicorn/prefer-string-trim-start-end': 'off',
     'unicorn/prefer-string-raw': 'off',
+    'unicorn/no-negated-condition': 'off',
     /**
      * change options
      */
