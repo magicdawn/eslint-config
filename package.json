@@ -1,26 +1,23 @@
 {
   "name": "@magicdawn/eslint-config",
-  "version": "1.5.13",
-  "packageManager": "pnpm@10.23.0+sha512.21c4e5698002ade97e4efe8b8b4a89a8de3c85a37919f957e7a0f30f38fbc5bbdd05980ffe29179b2fb6e6e691242e098d945d1601772cad0fef5fb6411e2a4b",
-  "description": "magicdawn's eslint-config",
   "type": "module",
-  "keywords": [
-    "eslint-config",
-    "eslint",
-    "magicdawn"
-  ],
+  "version": "1.5.13",
+  "packageManager": "pnpm@10.24.0+sha512.01ff8ae71b4419903b65c60fb2dc9d34cf8bb6e06d03bde112ef38f7a34d6904c424ba66bea5cdcf12890230bf39f9580473140ed9c946fef328b6e5238a345a",
+  "description": "magicdawn's eslint-config",
+  "author": "magicdawn",
   "license": "MIT",
   "homepage": "https://github.com/magicdawn/eslint-config#readme",
-  "bugs": {
-    "url": "https://github.com/magicdawn/eslint-config/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/magicdawn/eslint-config.git"
   },
-  "author": "magicdawn",
-  "files": [
-    "dist/"
+  "bugs": {
+    "url": "https://github.com/magicdawn/eslint-config/issues"
+  },
+  "keywords": [
+    "eslint-config",
+    "eslint",
+    "magicdawn"
   ],
   "exports": {
     "./package.json": "./package.json",
@@ -29,6 +26,9 @@
       "default": "./dist/index.js"
     }
   },
+  "files": [
+    "dist/"
+  ],
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
     "access": "public"
@@ -51,7 +51,7 @@
     }
   },
   "dependencies": {
-    "@sxzz/eslint-config": "^7.3.2",
+    "@sxzz/eslint-config": "^7.4.1",
     "es-toolkit": "^1.42.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-flat-config-utils": "^2.1.4"
@@ -61,8 +61,8 @@
     "@types/node": "^24.10.1",
     "husky": "^9.1.7",
     "lint-staged": "^16.2.7",
-    "prettier": "^3.6.2",
-    "tsdown": "^0.16.7"
+    "prettier": "^3.7.4",
+    "tsdown": "^0.17.0"
   },
   "lint-staged": {
     "*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,json,md,yaml,yml}": [
