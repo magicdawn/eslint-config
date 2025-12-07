@@ -23,7 +23,7 @@ export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]) {
   const { sortImport, ...sxzzOptions } = options ?? {}
   return (
     sxzz(
-      { command: false, prettier: false, ...(sxzzOptions ?? {}) },
+      { command: false, prettier: false, ...sxzzOptions },
       [
         eslintConfigPrettier,
         mgCustomIgnoreConfig,
