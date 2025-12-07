@@ -65,9 +65,12 @@
     "tsdown": "^0.17.0"
   },
   "lint-staged": {
-    "*.{js,cjs,mjs,ts,cts,mts,jsx,tsx,json,md,yaml,yml}": [
+    "*.{?(c|m)(j|t)s?(x),json,y?(a)ml}": [
       "eslint --fix",
       "prettier --write"
+    ],
+    "!*.{?(c|m)(j|t)s?(x),json,y?(a)ml}": [
+      "prettier --write --ignore-unknown"
     ]
   }
 }

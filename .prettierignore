@@ -1,3 +1,2 @@
-node_modules
-dist/
+# contents not in .gitignore
 pnpm-lock.yaml
