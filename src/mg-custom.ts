@@ -46,6 +46,17 @@ export const mgCustomRules = {
     'unicorn/prefer-string-trim-start-end': 'off',
     'unicorn/prefer-string-raw': 'off',
     'unicorn/no-negated-condition': 'off',
+
+    // Baseline: 2023 newly available
+    'unicorn/no-array-sort': 'off',
+    'unicorn/no-array-reverse': 'off',
+    // ===END===
+
+    // 不好用
+    'unicorn/prefer-global-this': 'off', // 有些语义不一样...
+    'unicorn/no-useless-undefined': 'off', // 关键这条规则太蠢... 返回值期望 string|undefined, `return` 会认为是 void
+    // ===END===
+
     /**
      * change options
      */
