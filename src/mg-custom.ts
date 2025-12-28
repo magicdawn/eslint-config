@@ -27,40 +27,58 @@ export const mgCustomRules = {
   },
 
   unicorn: {
-    /**
-     * I don't prefer, I know what I'm doing ~
-     */
-    'unicorn/catch-error-name': 'off',
-    'unicorn/consistent-function-scoping': 'off',
-    'unicorn/filename-case': 'off',
+    /* #region disable prefer */
+    // I don't prefer, I know what I'm doing ~
+
+    // array
     'unicorn/prefer-array-flat-map': 'off',
     'unicorn/prefer-array-index-of': 'off',
     'unicorn/prefer-array-some': 'off',
-    'unicorn/prefer-single-call': 'off',
-    'unicorn/prefer-reflect-apply': 'off',
+    'unicorn/no-array-reduce': 'off',
+
+    // string
+    'unicorn/prefer-string-trim-start-end': 'off',
+    'unicorn/prefer-string-raw': 'off',
+
+    // dom API
     'unicorn/prefer-query-selector': 'off',
     'unicorn/prefer-dom-node-append': 'off',
     'unicorn/prefer-dom-node-dataset': 'off',
-    'unicorn/prefer-modern-dom-apis': 'off', // insertAdjacentElement is so nice & intuitive, but U prefer other !!!
     'unicorn/prefer-add-event-listener': 'off',
-    'unicorn/prefer-string-trim-start-end': 'off',
-    'unicorn/prefer-string-raw': 'off',
-    'unicorn/no-negated-condition': 'off',
+    'unicorn/prefer-single-call': 'off',
+    'unicorn/prefer-reflect-apply': 'off',
 
-    // Baseline: 2023 newly available
+    // 'unicorn/prefer-modern-dom-apis': 'warn',
+    // 1. insertAdjacentElement is so nice & intuitive, but U prefer other !!!
+    // 2. I changed my mind
+    //   beforebegin: refNode.before(newNode) hard to read, but shorter
+    //   afterend: 		refNode.after(newNode) 	hard to read, but shorter
+    //
+    // 	refNode.after(newNode) means: let newNode after refNode, but the sentence looks like refNode after newNode
+    // 	The right way: (pseudo code via prototype method or static method)
+    // 			newNode.before(refNode)
+    // 			newNode.after(refNode)
+    //
+    // better use modern
+    //   afterbegin:	parentNode.prepend(newNode)
+    //   beforeend:		parentNode.append(newNode)
+
+    // misc
+    'unicorn/catch-error-name': 'off',
+    'unicorn/consistent-function-scoping': 'off',
+    'unicorn/filename-case': 'off',
+    'unicorn/no-negated-condition': 'off',
+    /* #endregion */
+
+    /* #region Baseline: 2023 newly available */
     'unicorn/no-array-sort': 'off',
     'unicorn/no-array-reverse': 'off',
-    // ===END===
+    /* #endregion */
 
-    // 不好用
+    /* #region 不好用 */
     'unicorn/prefer-global-this': 'off', // 有些语义不一样...
     'unicorn/no-useless-undefined': 'off', // 关键这条规则太蠢... 返回值期望 string|undefined, `return` 会认为是 void
-    // ===END===
-
-    /**
-     * change options
-     */
-    'unicorn/text-encoding-identifier-case': ['warn', { withDash: true }], // ✅ `utf-8`, no `utf8`
+    /* #endregion */
   },
 
   disableMorePrefer: {

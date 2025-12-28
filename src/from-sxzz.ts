@@ -91,7 +91,11 @@ export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]) {
           assert(options.length === 1, 'options.length should be 1')
           assert(options[0], 'options[0] should not be nil')
           // modify options
-          options[0].internalPattern = uniq(['^[~@#$]/.*', String.raw`^\$.+`, ...(internalPattern ?? [])]) // add `$`
+          options[0].internalPattern = uniq([
+            '^[~@#$]/.*',
+            `^[$].+`, // add `$foo`
+            ...(internalPattern ?? []),
+          ])
           options[0].groups = uniq([
             ...(groups ?? []),
             'side-effect-style',
