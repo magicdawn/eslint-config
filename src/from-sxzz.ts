@@ -3,6 +3,7 @@ import { GLOB_SRC, GLOB_TS, GLOB_TSX, sxzz } from '@sxzz/eslint-config'
 import { uniq } from 'es-toolkit'
 import eslintConfigPrettier from 'eslint-config-prettier'
 import { mgCustomIgnoreConfig, mgCustomJsonOrder, mgCustomRules } from './mg-custom'
+import { customSortImportGroups } from './perfection-list/sort-imports'
 import type { Linter } from 'eslint'
 
 type SxzzArgs = Parameters<typeof sxzz>
@@ -96,10 +97,11 @@ export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]) {
             `^[$].+`, // add `$foo`
             ...(internalPattern ?? []),
           ])
+
           options[0].groups = uniq([
+            //
             ...(groups ?? []),
-            'side-effect-style',
-            'side-effect',
+            ...customSortImportGroups,
             ...(options[0].groups ?? []),
           ])
         }
