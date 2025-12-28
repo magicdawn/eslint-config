@@ -102,7 +102,6 @@ export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]) {
             //
             ...(groups ?? []),
             ...customSortImportGroups,
-            ...(options[0].groups ?? []),
           ])
         }
         return config
