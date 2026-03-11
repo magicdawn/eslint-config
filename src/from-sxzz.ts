@@ -20,7 +20,7 @@ interface MixedOptions extends Exclude<SxzzOptions, undefined> {
   sortImport?: SortImportOptions
 }
 
-export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]) {
+export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]): ReturnType<typeof sxzz> {
   const { sortImport, ...sxzzOptions } = options ?? {}
   return (
     sxzz(
