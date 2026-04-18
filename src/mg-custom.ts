@@ -48,7 +48,6 @@ export const mgCustomRules = {
     'unicorn/prefer-single-call': 'off',
     'unicorn/prefer-reflect-apply': 'off',
 
-    // 'unicorn/prefer-modern-dom-apis': 'warn',
     // 1. insertAdjacentElement is so nice & intuitive, but U prefer other !!!
     // 2. I changed my mind
     //   beforebegin: refNode.before(newNode) hard to read, but shorter
@@ -62,6 +61,11 @@ export const mgCustomRules = {
     // better use modern
     //   afterbegin:	parentNode.prepend(newNode)
     //   beforeend:		parentNode.append(newNode)
+    //
+    // I change my mind again. (Apr 2026)
+    // `insertAdjacentElement` intuitive wins
+    //
+    'unicorn/prefer-modern-dom-apis': 'off',
 
     // misc
     'unicorn/catch-error-name': 'off',
