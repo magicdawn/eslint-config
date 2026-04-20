@@ -18,6 +18,7 @@ export const mgCustomRules = {
     'no-duplicate-imports': 'off',
     'prefer-const': ['warn', { destructuring: 'all' }],
     'array-callback-return': 'off', // this rule is useful, but current habit don't use it. Enable after it cause a serious bug
+    'no-useless-assignment': 'off',
   },
 
   // import {type X} from 'x'
