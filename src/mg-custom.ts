@@ -73,6 +73,7 @@ export const mgCustomRules = {
     'unicorn/consistent-function-scoping': 'off',
     'unicorn/filename-case': 'off',
     'unicorn/no-negated-condition': 'off',
+    'unicorn/prefer-default-parameters': 'off',
     /* #endregion */
 
     /* #region Baseline: 2023 newly available */

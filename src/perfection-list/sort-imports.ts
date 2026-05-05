@@ -61,10 +61,10 @@ function addModifier(modifier: 'type' | 'style') {
 }
 
 export const customSortImportGroups = [
-  //
   'side-effect-style',
   'side-effect',
 
   ...generalOrder,
+  // { newlinesBetween: 1 },
   ...addModifier('type'),
 ]
