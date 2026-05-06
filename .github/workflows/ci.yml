@@ -48,9 +48,9 @@ jobs:
           cd ./dist-branch
           npm pkg delete scripts.prepare # husky
           v=$(npm pkg get version)
-          npm pkg set version="${TAG#v}" # remove v prefix
+          npm pkg set version="${GH_DESCRIBE#v}" # remove v prefix
         env:
-          TAG: ${{ steps.ghd.outputs.tag }}
+          GH_DESCRIBE: ${{ steps.ghd.outputs.describe }}
 
       - name: commit to dist branch
         uses: peaceiris/actions-gh-pages@v4
