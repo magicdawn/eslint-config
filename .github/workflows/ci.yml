@@ -1,0 +1,63 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+
+concurrency:
+  group: ${{ github.workflow }}
+  # 很烦: 通知无法关掉
+  # cancel-in-progress: true
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git describe
+        id: ghd
+        uses: proudust/gh-describe@v3
+
+      - uses: actions/checkout@v6
+      - uses: pnpm/action-setup@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: lts/*
+          cache: pnpm
+
+      - name: Install deps
+        run: pnpm install --frozen-lockfile
+
+      - name: Turbo cache
+        uses: actions/cache@v5
+        with:
+          path: node_modules/.cache/turbo
+          key: turbo-cache-${{ runner.os }}
+
+      - name: pack targz
+        run: pnpm pack
+
+      - name: prepare dist-branch content
+        run: |
+          rm -rf ./dist-branch
+          mkdir -p ./dist-branch
+          tar -xzf *.tgz -C ./dist-branch --strip-components=1
+
+      - name: fix package.json
+        run: |
+          cd ./dist-branch
+          npm pkg delete scripts.prepare # husky
+          v=$(npm pkg get version)
+          npm pkg set version "${TAG#v}" # remove v prefix
+        env:
+          TAG: ${{ steps.ghd.outputs.tag }}
+
+      - name: commit to dist branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          publish_branch: dist
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist-branch
+          force_orphan: true
+          user_name: 'github-actions[bot]'
+          user_email: 'github-actions[bot]@users.noreply.github.com'

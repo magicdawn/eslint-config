@@ -9,3 +9,6 @@ coverage
 coverage.*
 
 dist/
+/dist-branch/
+# npm pack
+*.tgz
