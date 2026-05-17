@@ -19,6 +19,7 @@ export const mgCustomRules = {
     'prefer-const': ['warn', { destructuring: 'all' }],
     'array-callback-return': 'off', // this rule is useful, but current habit don't use it. Enable after it cause a serious bug
     'no-useless-assignment': 'off',
+    'no-lonely-if': 'off', // this change the meaning of WHAT-I-WANT-TO-DO
   },
 
   // import {type X} from 'x'
