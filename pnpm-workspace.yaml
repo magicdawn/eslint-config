@@ -1,2 +1,5 @@
 allowBuilds:
   unrs-resolver: true
+
+# for ncu; pnpm default; pnpm does need this
+minimumReleaseAge: 1440
