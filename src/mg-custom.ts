@@ -168,6 +168,7 @@ export type TsConfigCompilerOptionsKey =
   | 'strictPropertyInitialization'
   | 'allowUnreachableCode'
   | 'allowUnusedLabels'
+  | 'strictBuiltinIteratorReturn'
   | 'alwaysStrict'
   | 'exactOptionalPropertyTypes'
   | 'noFallthroughCasesInSwitch'
@@ -261,9 +262,19 @@ export const mgCustomJsonOrder = {
         'allowSyntheticDefaultImports',
         'isolatedModules', // vite mandatory
 
-        // type check
+        // typecheck:strict
         'strict',
-        'noImplicitOverride',
+        'alwaysStrict',
+        'strictNullChecks',
+        'strictBindCallApply',
+        'strictBuiltinIteratorReturn',
+        'strictFunctionTypes',
+        'strictPropertyInitialization',
+        'noImplicitAny',
+        'noImplicitThis',
+        'useUnknownInCatchVariables',
+
+        // typecheck:more
         'skipLibCheck',
         'types',
 
