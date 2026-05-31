@@ -37,7 +37,7 @@
     "prepare": "husky",
     "dev": "tsdown src/index.ts --dts --no-fixed-extension --watch",
     "build": "tsdown src/index.ts --dts --no-fixed-extension",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsgo --noEmit",
     "prepack": "pnpm typecheck && pnpm build",
     "inspect": "pnpx @eslint/config-inspector@latest"
   },
@@ -59,10 +59,12 @@
   "devDependencies": {
     "@magicdawn/prettier-config": "^0.1.0",
     "@types/node": "^25.9.1",
+    "@typescript/native-preview": "7.0.0-dev.20260527.2",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.5",
     "prettier": "^3.8.3",
-    "tsdown": "^0.22.1"
+    "tsdown": "^0.22.1",
+    "typescript": "^6.0.3"
   },
   "lint-staged": {
     "*.{?(c|m)(j|t)s?(x),json,y?(a)ml}": [

@@ -2,8 +2,9 @@ import assert from 'node:assert/strict'
 import { GLOB_SRC, GLOB_TS, GLOB_TSX, sxzz } from '@sxzz/eslint-config'
 import { uniq } from 'es-toolkit'
 import eslintConfigPrettier from 'eslint-config-prettier'
-import { mgCustomIgnoreConfig, mgCustomJsonOrder, mgCustomRules } from './mg-custom'
-import { customSortImportGroups } from './perfection-list/sort-imports'
+import { mgCustomIgnoreConfig, mgCustomRules } from './mg-custom'
+import { customSortImportGroups } from './mg-custom/perfection-list/sort-imports'
+import { mgCustomJsonOrder } from './mg-custom/tsconfig'
 import type { Linter } from 'eslint'
 
 type SxzzArgs = Parameters<typeof sxzz>

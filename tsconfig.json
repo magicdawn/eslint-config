@@ -1,11 +1,9 @@
 {
   "include": ["src"],
   "compilerOptions": {
-    "target": "ES2024",
-    "module": "ESNext",
+    "target": "es2025",
+    "module": "preserve",
     "moduleResolution": "bundler",
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
     "noImplicitOverride": true,
     "skipLibCheck": true,
