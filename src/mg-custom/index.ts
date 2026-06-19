@@ -85,6 +85,7 @@ export const mgCustomRules = {
     /* #region 不好用 */
     'unicorn/prefer-global-this': 'off', // 有些语义不一样...
     'unicorn/no-useless-undefined': 'off', // 关键这条规则太蠢... 返回值期望 string|undefined, `return` 会认为是 void
+    'unicorn/no-array-from-fill': 'off',
     /* #endregion */
   },
 
