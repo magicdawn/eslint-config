@@ -51,7 +51,7 @@ export default defineConfig([
 {
   "lint-staged": {
     // eslint+prettier on js,json,yaml
-    "*.{?(c|m)(j|t)s?(x),json,y?(a)ml}": ["eslint --fix", "prettier --write"],
+    "*.{?(c|m)(j|t)s?(x),json,y?(a)ml}": ["eslint --fix --no-warn-ignored", "prettier --write --ignore-unknown"],
     "!*.{?(c|m)(j|t)s?(x),json,y?(a)ml}": ["prettier --write --ignore-unknown"],
 
     // or more aggressive
