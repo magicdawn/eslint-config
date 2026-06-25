@@ -82,11 +82,15 @@ export const mgCustomRules = {
     'unicorn/no-array-reverse': 'off',
     /* #endregion */
 
-    /* #region 不好用 */
-    'unicorn/prefer-global-this': 'off', // 有些语义不一样...
-    'unicorn/no-useless-undefined': 'off', // 关键这条规则太蠢... 返回值期望 string|undefined, `return` 会认为是 void
+    /* #region 改变实现 */
     'unicorn/no-array-from-fill': 'off',
     /* #endregion */
+
+    // #region 错误的规则
+    'unicorn/prefer-global-this': 'off', // 有些语义不一样...
+    'unicorn/no-useless-undefined': 'off', // 返回值期望 string|undefined, `return` 会认为是 void
+    'unicorn/prefer-iterator-to-array-at-end': 'off', // Cheerio 被认为是 iterator, 但实际上可能不是 iterator, 而只是实现了 map toArray 方法
+    // #endregion
   },
 
   disableMorePrefer: {
