@@ -1,0 +1,75 @@
+{
+  "name": "@magicdawn/eslint-config",
+  "type": "module",
+  "version": "1.6.10-1-g73b335b",
+  "description": "magicdawn's eslint-config",
+  "author": "magicdawn",
+  "license": "MIT",
+  "homepage": "https://github.com/magicdawn/eslint-config#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicdawn/eslint-config.git"
+  },
+  "bugs": {
+    "url": "https://github.com/magicdawn/eslint-config/issues"
+  },
+  "keywords": [
+    "eslint-config",
+    "eslint",
+    "magicdawn"
+  ],
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    }
+  },
+  "files": [
+    "dist/"
+  ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "peerDependencies": {
+    "@unocss/eslint-plugin": "^66.6.8",
+    "eslint": "^10 || ^9"
+  },
+  "peerDependenciesMeta": {
+    "@unocss/eslint-plugin": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@sxzz/eslint-config": "^8.2.1",
+    "es-toolkit": "^1.49.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-flat-config-utils": "^3.2.0"
+  },
+  "devDependencies": {
+    "@magicdawn/prettier-config": "^0.1.0",
+    "@types/node": "^26.0.1",
+    "@typescript/native-preview": "7.0.0-dev.20260628.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "prettier": "^3.9.1",
+    "tsdown": "^0.22.3",
+    "typescript": "^6.0.3"
+  },
+  "lint-staged": {
+    "*.{?(c|m)(j|t)s?(x),json,y?(a)ml}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "!*.{?(c|m)(j|t)s?(x),json,y?(a)ml}": [
+      "prettier --write --ignore-unknown"
+    ]
+  },
+  "scripts": {
+    "dev": "tsdown src/index.ts --dts --no-fixed-extension --watch",
+    "build": "tsdown src/index.ts --dts --no-fixed-extension",
+    "typecheck": "tsgo --noEmit",
+    "inspect": "pnpx @eslint/config-inspector@latest"
+  }
+}
