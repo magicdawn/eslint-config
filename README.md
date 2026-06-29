@@ -12,6 +12,12 @@
 $ pnpm add -D @magicdawn/eslint-config
 ```
 
+### use github repo `dist` branch
+
+```sh
+$ pnpm add -D github:magicdawn/eslint-config#dist
+```
+
 ## Usage
 
 ### extend from [@sxzz/eslint-config](https://github.com/sxzz/eslint-config)
