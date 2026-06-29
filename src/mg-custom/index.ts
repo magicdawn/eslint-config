@@ -29,9 +29,21 @@ export const mgCustomRules = {
   },
 
   unicorn: {
-    /* #region disable prefer */
-    // I don't prefer, I know what I'm doing ~
+    // #region 错误的规则
+    'unicorn/prefer-global-this': 'off', // 有些语义不一样...
+    'unicorn/no-useless-undefined': 'off', // 返回值期望 string|undefined, `return` 会认为是 void
+    'unicorn/prefer-iterator-to-array-at-end': 'off', // Cheerio 被认为是 iterator, 但实际上可能不是 iterator, 而只是实现了 map toArray 方法
+    // #endregion
 
+    // #region 改变实现
+    'unicorn/no-array-from-fill': 'off',
+    // #endregion
+
+    // #region 改变语义
+    'unicorn/no-unnecessary-nested-ternary': 'off',
+    // #endregion
+
+    // #region disable-prefer: I know what I'm doing
     // array
     'unicorn/prefer-array-flat-map': 'off',
     'unicorn/prefer-array-index-of': 'off',
@@ -75,21 +87,11 @@ export const mgCustomRules = {
     'unicorn/filename-case': 'off',
     'unicorn/no-negated-condition': 'off',
     'unicorn/prefer-default-parameters': 'off',
-    /* #endregion */
+    // #endregion
 
-    /* #region Baseline: 2023 newly available */
+    // #region Baseline: 2023 newly available
     'unicorn/no-array-sort': 'off',
     'unicorn/no-array-reverse': 'off',
-    /* #endregion */
-
-    /* #region 改变实现 */
-    'unicorn/no-array-from-fill': 'off',
-    /* #endregion */
-
-    // #region 错误的规则
-    'unicorn/prefer-global-this': 'off', // 有些语义不一样...
-    'unicorn/no-useless-undefined': 'off', // 返回值期望 string|undefined, `return` 会认为是 void
-    'unicorn/prefer-iterator-to-array-at-end': 'off', // Cheerio 被认为是 iterator, 但实际上可能不是 iterator, 而只是实现了 map toArray 方法
     // #endregion
   },
 
