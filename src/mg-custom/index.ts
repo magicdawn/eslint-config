@@ -35,11 +35,12 @@ export const mgCustomRules = {
     'unicorn/prefer-iterator-to-array-at-end': 'off', // Cheerio 被认为是 iterator, 但实际上可能不是 iterator, 而只是实现了 map toArray 方法
     // #endregion
 
-    // #region 改变实现
-    'unicorn/no-array-from-fill': 'off',
+    // #region 多管闲事
+    'unicorn/no-exports-in-scripts': 'off',
     // #endregion
 
-    // #region 改变语义
+    // #region 改变实现 | 改变语义
+    'unicorn/no-array-from-fill': 'off',
     'unicorn/no-unnecessary-nested-ternary': 'off',
     // #endregion
 

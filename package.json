@@ -58,11 +58,11 @@
   },
   "devDependencies": {
     "@magicdawn/prettier-config": "^0.1.0",
-    "@types/node": "^26.0.1",
-    "@typescript/native-preview": "7.0.0-dev.20260628.1",
+    "@types/node": "^26.1.0",
+    "@typescript/native-preview": "7.0.0-dev.20260702.3",
     "husky": "^9.1.7",
     "lint-staged": "^17.0.8",
-    "prettier": "^3.9.1",
+    "prettier": "^3.9.4",
     "tsdown": "^0.22.3",
     "typescript": "^6.0.3"
   },
