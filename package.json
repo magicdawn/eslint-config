@@ -2,7 +2,7 @@
   "name": "@magicdawn/eslint-config",
   "type": "module",
   "version": "1.6.12",
-  "packageManager": "pnpm@11.10.0+sha512.0b7f8b98060031904c017e3a41eb187a16d40eeb829b95c4f8cb03681761fc4ab53dd219115b9b447f4dce1a05a214764461e7d3703392a9f32f9511ce8c86c8",
+  "packageManager": "pnpm@11.17.0+sha512.cca3cea332ad254bb84145f966d19f4879615210346fc92c79a047f23a0d7b3cca3c3792f0076ba1f1831d277efbcf0a9119b31a9a60eca7fb3d6231f331ef72",
   "description": "magicdawn's eslint-config",
   "author": "magicdawn",
   "license": "MIT",
@@ -51,8 +51,8 @@
     }
   },
   "dependencies": {
-    "@sxzz/eslint-config": "^8.2.1",
-    "es-toolkit": "^1.49.0",
+    "@sxzz/eslint-config": "^8.3.1",
+    "es-toolkit": "^1.50.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-flat-config-utils": "^3.2.0"
   },
@@ -61,9 +61,9 @@
     "@types/node": "^26.1.1",
     "@typescript/native-preview": "7.0.0-dev.20260707.2",
     "husky": "^9.1.7",
-    "lint-staged": "^17.0.8",
-    "prettier": "^3.9.4",
-    "tsdown": "^0.22.4",
+    "lint-staged": "^17.2.0",
+    "prettier": "^3.9.6",
+    "tsdown": "^0.22.14",
     "typescript": "^6.0.3"
   },
   "lint-staged": {

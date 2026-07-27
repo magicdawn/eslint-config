@@ -28,12 +28,24 @@ export const mgCustomRules = {
     '@typescript-eslint/consistent-type-imports': ['warn', { fixStyle: 'inline-type-imports' }],
   },
 
+  /**
+   * TODO: 很多垃圾规则
+   */
   unicorn: {
     // #region 错误的规则
     'unicorn/prefer-global-this': 'off', // 有些语义不一样...
     'unicorn/no-useless-undefined': 'off', // 返回值期望 string|undefined, `return` 会认为是 void
-    'unicorn/prefer-iterator-to-array-at-end': 'off', // Cheerio 被认为是 iterator, 但实际上可能不是 iterator, 而只是实现了 map toArray 方法
-    'unicorn/no-unused-array-method-return': 'off', // 仅靠方法名推断, 大错特错!!! drizzle-orm `db.insert(table).values()` 被识别成 Array
+
+    // 我自己扩展的 NodeList.prototype.toArray()
+    // document.querySelectorAll().toArray().find() 报 `no-useless-iterator-to-array`
+    // 仅靠方法名推断, 垃圾规则
+    'unicorn/no-useless-iterator-to-array': 'off',
+
+    // Cheerio 被认为是 iterator, 但实际上可能不是 iterator, 而只是实现了 map toArray 方法
+    'unicorn/prefer-iterator-to-array-at-end': 'off',
+
+    // 仅靠方法名推断, 大错特错!!! drizzle-orm `db.insert(table).values()` 被识别成 Array
+    'unicorn/no-unused-array-method-return': 'off',
     // #endregion
 
     // #region 多管闲事
