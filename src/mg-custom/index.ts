@@ -35,7 +35,6 @@ export const mgCustomRules = {
     // #region 错误的规则
     'unicorn/prefer-global-this': 'off', // 有些语义不一样...
     'unicorn/no-useless-undefined': 'off', // 返回值期望 string|undefined, `return` 会认为是 void
-
     // Cheerio 被认为是 iterator, 但实际上可能不是 iterator, 而只是实现了 map toArray 方法
     // 但 iterator toArray at end 确实符合我的想法
     // 'unicorn/prefer-iterator-to-array-at-end': 'off',
@@ -43,15 +42,22 @@ export const mgCustomRules = {
     // 规则缺陷:仅靠方法名推断
     // drizzle-orm `db.insert(table).values()` 被识别成 Array
     'unicorn/no-unused-array-method-return': 'off',
+    'unicorn/no-declarations-before-early-exit': 'off', // 比如 react FC: 未识别的 hooks + early return
     // #endregion
 
     // #region 多管闲事
     'unicorn/no-exports-in-scripts': 'off',
+    'unicorn/no-top-level-side-effects': 'off',
+    'unicorn/no-global-object-property-assignment': 'off',
+    'unicorn/no-unnecessary-global-this': 'off',
+    'unicorn/explicit-timer-delay': 'off',
     // #endregion
 
-    // #region 改变实现 | 改变语义
+    // #region 改变实现 | 改变语义 | 不方便扩展
     'unicorn/no-array-from-fill': 'off',
     'unicorn/no-unnecessary-nested-ternary': 'off',
+    'unicorn/no-useless-continue': 'off',
+    'unicorn/prefer-early-return': 'off',
     // #endregion
 
     // #region disable-prefer: I know what I'm doing
@@ -98,6 +104,7 @@ export const mgCustomRules = {
     'unicorn/filename-case': 'off',
     'unicorn/no-negated-condition': 'off',
     'unicorn/prefer-default-parameters': 'off',
+    'unicorn/prefer-boolean-return': 'off',
     // #endregion
 
     // #region Baseline: 2023 newly available
