@@ -43,6 +43,7 @@ export const mgCustomRules = {
     // drizzle-orm `db.insert(table).values()` 被识别成 Array
     'unicorn/no-unused-array-method-return': 'off',
     'unicorn/no-declarations-before-early-exit': 'off', // 比如 react FC: 未识别的 hooks + early return
+    'unicorn/throw-new-error': 'off', // 此规则要求所有的 AbcError() 必须 new, 如 better-result TaggedError definition 不是 throw
     // #endregion
 
     // #region 多管闲事
