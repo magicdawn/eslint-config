@@ -59,6 +59,7 @@ export const mgCustomRules = {
     'unicorn/no-unnecessary-nested-ternary': 'off',
     'unicorn/no-useless-continue': 'off',
     'unicorn/prefer-early-return': 'off',
+    'unicorn/prefer-boolean-return': 'off',
     // #endregion
 
     // #region disable-prefer: I know what I'm doing
@@ -105,7 +106,6 @@ export const mgCustomRules = {
     'unicorn/filename-case': 'off',
     'unicorn/no-negated-condition': 'off',
     'unicorn/prefer-default-parameters': 'off',
-    'unicorn/prefer-boolean-return': 'off',
     // #endregion
 
     // #region Baseline: 2023 newly available
