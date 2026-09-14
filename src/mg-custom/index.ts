@@ -46,6 +46,10 @@ export const mgCustomRules = {
     'unicorn/throw-new-error': 'off', // 此规则要求所有的 AbcError() 必须 new, 如 better-result TaggedError definition 不是 throw
     // #endregion
 
+    /* #region 实现过于简单，以至于错误的实现 */
+    'unicorn/require-css-escape': 'off',
+    /* #endregion */
+
     // #region 多管闲事
     'unicorn/no-exports-in-scripts': 'off',
     'unicorn/no-top-level-side-effects': 'off',
@@ -68,6 +72,7 @@ export const mgCustomRules = {
     'unicorn/prefer-array-index-of': 'off',
     'unicorn/prefer-array-some': 'off',
     'unicorn/no-array-reduce': 'off',
+    'unicorn/no-negated-array-predicate': 'off',
 
     // string
     'unicorn/prefer-string-trim-start-end': 'off',
