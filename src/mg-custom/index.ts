@@ -40,8 +40,13 @@ export const mgCustomRules = {
     // 'unicorn/prefer-iterator-to-array-at-end': 'off',
 
     // 规则缺陷:仅靠方法名推断
+
     // drizzle-orm `db.insert(table).values()` 被识别成 Array
     'unicorn/no-unused-array-method-return': 'off',
+
+    // cheerio 需要 toArray, 被识别成 iterator
+    'unicorn/no-useless-iterator-to-array': 'off',
+
     'unicorn/no-declarations-before-early-exit': 'off', // 比如 react FC: 未识别的 hooks + early return
     'unicorn/throw-new-error': 'off', // 此规则要求所有的 AbcError() 必须 new, 如 better-result TaggedError definition 不是 throw
     // #endregion
@@ -111,6 +116,7 @@ export const mgCustomRules = {
     'unicorn/filename-case': 'off',
     'unicorn/no-negated-condition': 'off',
     'unicorn/prefer-default-parameters': 'off',
+    'unicorn/prefer-minimal-ternary': 'off',
     // #endregion
 
     // #region Baseline: 2023 newly available
