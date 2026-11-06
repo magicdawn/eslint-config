@@ -66,7 +66,12 @@ export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]): 
       .remove('sxzz/markdown/recommended/processor')
       .remove('sxzz/comments/recommended')
       .remove('sxzz/comments')
-      .removeRules('sxzz/prefer-string-function')
+      .removeRules(
+        'sxzz/prefer-string-function',
+        // I don't want enforce catalog
+        // original code: ...(hasPnpmCatalogs() ? { 'pnpm/json-enforce-catalog': 'error' } : {}),
+        'pnpm/json-enforce-catalog',
+      )
 
       // replace tsconfig order with mgCustom
       .override('sxzz/sort/tsconfig', (config) => {
