@@ -1,7 +1,6 @@
 import assert from 'node:assert/strict'
 import { GLOB_SRC, GLOB_TS, GLOB_TSX, sxzz } from '@sxzz/eslint-config'
 import { uniq } from 'es-toolkit'
-import eslintConfigPrettier from 'eslint-config-prettier'
 import { mgCustomIgnoreConfig, mgCustomRules } from './mg-custom'
 import { customSortImportGroups } from './mg-custom/perfection-list/sort-imports'
 import { mgCustomJsonOrder } from './mg-custom/tsconfig'
@@ -27,7 +26,6 @@ export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]): 
     sxzz(
       { command: false, prettier: false, ...sxzzOptions },
       [
-        eslintConfigPrettier,
         mgCustomIgnoreConfig,
         {
           // apply to all files

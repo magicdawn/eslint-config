@@ -1,5 +1,15 @@
-allowBuilds:
-  unrs-resolver: true
-
 # for ncu; pnpm default; pnpm does not need this
 minimumReleaseAge: 1440
+
+minimumReleaseAgeExcludePrune: true
+
+minimumReleaseAgeExclude:
+  - '@magicdawn/shared@0.0.2'
+trustPolicy: no-downgrade
+
+trustPolicyExcludePrune: true
+
+shellEmulator: true
+
+allowBuilds:
+  unrs-resolver: true
