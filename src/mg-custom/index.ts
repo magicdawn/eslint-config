@@ -152,4 +152,8 @@ export const mgCustomRules = {
     'no-var': 'off',
     'vars-on-top': 'off',
   },
+
+  pnpmCatalog: {
+    'pnpm/yaml-no-duplicate-catalog-item': 'off', // I need this
+  },
 } as const satisfies Record<string, Linter.RulesRecord>
