@@ -33,7 +33,7 @@ export function fromSxzz(options?: MixedOptions, ...moreConfigs: UserConfig[]): 
           rules: {
             ...mgCustomRules.unicorn,
             ...mgCustomRules.disableMorePrefer,
-            ...mgCustomRules.pnpmCatalog,
+            ...mgCustomRules.pnpm,
           },
         },
         {
